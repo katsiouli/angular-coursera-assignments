@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script src="angular.min.js"></script>
     <script src="app.js"></script>
+    <style media="screen">
+    .error {
+      color: red;
+      font-weight: bold;
+    }
+    </style>
     <link rel="stylesheet" href="styles/bootstrap.min.css">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
@@ -13,14 +19,18 @@
     <h1>Narrow Down Your Chinese Menu Choice</h1>
 
     <div class="form-group">
-      <input type="text" placeholder="search term" class="form-control">
+      <input type="text" placeholder="search term" class="form-control" ng-model="ctrl.searchTerm">
     </div>
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="ctrl.narrowDownMenu();">Narrow It Down For Me!</button>
     </div>
 
-    <!-- found-items should be implemented as a component -->
-    <found-items found-items="...." on-remove="...."></found-items>
+    <found-items found-items="ctrl.foundItems" on-remove="ctrl.removeItem(index)">
+
+      <span ng-if="ctrl.displayMsg">
+        No items found.
+      </span>
+    </found-items>
   </div>
 
 </body>
