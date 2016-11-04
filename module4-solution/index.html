@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" ng-app='MenuApp'>
+  <head>
+    <title>Menu</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="styles/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/styles.css">
+  </head>
+<body>
+   <div class="container">
+    <h1>Welcome to our Restaurant!</h1>
+
+    <p>
+      Click the following link in order to view all the foods categories being offered by our restaurant!
+    </p>
+
+    <ui-view></ui-view>
+
+    <!-- libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+
+    <!-- modules -->
+    <script src="src/data.module.js"></script>
+    <script src="src/menuapp.module.js"></script>
+
+    <script src="src/routes.js"></script>
+    <script src="src/menudata.service.js"></script>
+
+  </div>
+
+</body>
+</html>
