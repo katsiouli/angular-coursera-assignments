@@ -11,11 +11,13 @@
     service.getAllCategories = function() {
       return $http({
         method: 'GET',
-        url: (ApiBasePath + '/categpries.json')
+        url: (ApiBasePath + '/categories.json')
+      }).then(function(result) {
+        return result.data;
       });
     };
 
-    service.getItemsForCategory(categoryShortName) = function() {
+    service.getItemsForCategory = function(categoryShortName) {
       return $http({
         method: 'GET',
         url: (ApiBasePath + '/menu_items.json'),
