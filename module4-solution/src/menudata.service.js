@@ -24,6 +24,8 @@
         params: {
           category: categoryShortName
         }
+      }).then(function(result) {
+        return result.data;
       });
     };
 

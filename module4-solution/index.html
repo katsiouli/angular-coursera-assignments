@@ -8,14 +8,15 @@
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 <body>
-   <div class="container">
-    <h1>Welcome to our Restaurant!</h1>
+   <div class="panel panel-primary container">
 
-    <p>
-      Click the following link in order to view all the foods categories being offered by our restaurant!
-    </p>
+     <div class="panel-heading">
+       Welcome to our Restaurant!
+    </div>
 
-    <ui-view></ui-view>
+    <div class="panel-body">
+      <ui-view></ui-view>
+    </div>
 
     <!-- libraries -->
     <script src="lib/angular.min.js"></script>
@@ -29,6 +30,8 @@
     <script src="src/menudata.service.js"></script>
     <script src="src/categories.component.js"></script>
     <script src="src/categories.controller.js"></script>
+    <script src="src/items.component.js"></script>
+    <script src="src/items.controller.js"></script>
   </div>
 
 </body>
