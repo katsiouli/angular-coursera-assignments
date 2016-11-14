@@ -1,0 +1,25 @@
+<div class="container">
+
+ <div ng-if="!infoCtrl.displayMessage">
+   <h3> Your personal info </h3>
+
+   <strong>First Name:</strong> {{infoCtrl.user.firstName}} <br><br>
+   <strong>Last Name:</strong> {{infoCtrl.user.lastName}} <br><br>
+   <strong>Email: </strong> {{infoCtrl.user.email}} <br><br>
+   <strong>Phone: </strong> {{infoCtrl.user.phone}} <br><br>
+  <hr>
+   <strong>Favorite Dish</strong>
+
+   <strong>Name: </strong>{{infoCtrl.menu.name}} <br>
+
+   <img class="img-responsive" width="250" height="150" ng-src="/images/menu/{{infoCtrl.menu.short_name}}/{{infoCtrl.menu.short_name}}.jpg" >
+
+
+ </div>
+
+ <div ng-if="infoCtrl.displayMessage">
+   Not Signed Up Yet. <a ui-sref="public.signup">Sign up Now! </a>
+ </div>
+
+
+</div>

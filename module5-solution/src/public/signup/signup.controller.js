@@ -17,7 +17,7 @@
            console.log('response', response);
            if(response.menu_items.length) {
              //save the user
-             SignupService.saveUser(signUpCtrl.user);
+             SignupService.saveUser(signUpCtrl.user, response.category);
              signUpCtrl.message = "Your information has been saved!";
            }else {
              signUpCtrl.message = "No such menu number exists";

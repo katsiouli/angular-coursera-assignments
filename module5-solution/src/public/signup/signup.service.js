@@ -10,13 +10,20 @@
 
     var user = {};
 
-    service.saveUser = function(newuser) {
+    var menu = null;
+
+    service.saveUser = function(newuser, dish) {
       user = newuser;
+      menu = dish;
       console.log('user', user);
     };
 
     service.getUser = function() {
       return user;
+    };
+
+    service.getMenu = function() {
+      return menu;
     };
 
   };
