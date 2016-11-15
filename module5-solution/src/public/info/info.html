@@ -8,11 +8,13 @@
    <strong>Email: </strong> {{infoCtrl.user.email}} <br><br>
    <strong>Phone: </strong> {{infoCtrl.user.phone}} <br><br>
   <hr>
-   <strong>Favorite Dish</strong>
+   <h3> Favorite Dish </h3>
 
-   <strong>Name: </strong>{{infoCtrl.menu.name}} <br>
+   <strong>Short name: </strong>{{infoCtrl.menu.short_name}} <br><br>
+   <strong>Name: </strong>{{infoCtrl.menu.name}} <br><br>
+   <strong>Description: </strong>{{infoCtrl.menu.description}} <br><br>
 
-   <img class="img-responsive" width="250" height="150" ng-src="/images/menu/{{infoCtrl.menu.short_name}}/{{infoCtrl.menu.short_name}}.jpg" >
+   <img class="img-responsive" width="250" height="150" ng-src="http://pkatsiouli.herokuapp.com/images/{{infoCtrl.menu.short_name}}.jpg" >
 
 
  </div>
